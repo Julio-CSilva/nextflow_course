@@ -1,53 +1,39 @@
 # nf-core/nextflow_course
 
-## Introduction
+# Pipeline de Análise de Sequenciamento
 
-**nf-core/nextflow_course** is a bioinformatics pipeline that ...
+Este pipeline utiliza o Nextflow para executar a análise de qualidade dos dados de sequenciamento com o **FastQC** e gerar um relatório consolidado com o **MultiQC**. 
 
-<!-- TODO nf-core:
-   Complete this sentence with a 2-3 sentence summary of what types of data the pipeline ingests, a brief overview of the
-   major pipeline sections and the types of output it produces. You're giving an overview to someone new
-   to nf-core here, in 15-20 seconds. For an example, see https://github.com/nf-core/rnaseq/blob/master/README.md#introduction
--->
+## Pré-requisitos
 
-<!-- TODO nf-core: Include a figure that guides the user through the major workflow steps. Many nf-core
-     workflows use the "tube map" design for that. See https://nf-co.re/docs/contributing/design_guidelines#examples for examples.   -->
-<!-- TODO nf-core: Fill in short bullet-pointed list of the default steps in the pipeline -->
+- [Nextflow](https://www.nextflow.io/) instalado.
+- Docker (ou qualquer outro sistema de contêineres) configurado para rodar os processos.
 
-## Usage
+## Estrutura
 
-> [!NOTE]
-> If you are new to Nextflow and nf-core, please refer to [this page](https://nf-co.re/docs/usage/installation) on how to set-up Nextflow. 
+### 1. **FastQC**
+- **Objetivo**: Avaliar a qualidade das leituras de sequenciamento (FASTQ).
+- **Entrada**: Arquivos FASTQ.
+- **Saída**: Relatórios gerados pelo FastQC (`sarscov2_1*`).
 
-<!-- TODO nf-core: Describe the minimum required steps to execute the pipeline, e.g. how to prepare samplesheets.
-     Explain what rows and columns represent. For instance (please edit as appropriate):
+### 2. **MultiQC**
+- **Objetivo**: Gerar um relatório consolidado a partir dos relatórios do FastQC.
+- **Entrada**: Relatórios do FastQC.
+- **Saída**: Um arquivo HTML contendo o relatório do MultiQC (`multiqc_report.html`).
 
-First, prepare a samplesheet with your input data that looks as follows:
+### 3. **BLAST** (Comentado no código)
+- **Objetivo**: (Comentado no momento) Realizar a busca de sequências no banco de dados.
+- **Entrada**: Arquivo FASTA e banco de dados.
+- **Saída**: Arquivo com os resultados do BLAST (`blast_results.txt`).
 
-`samplesheet.csv`:
+## Como Usar
 
-```csv
-sample,fastq_1,fastq_2
-CONTROL_REP1,AEG588A1_S1_L002_R1_001.fastq.gz,AEG588A1_S1_L002_R2_001.fastq.gz
-```
-
-Each row represents a fastq file (single-end) or a pair of fastq files (paired end).
-
--->
-
-Now, you can run the pipeline using:
-
-<!-- TODO nf-core: update the following command to include all required parameters for a minimal example -->
+1. **Clone o Repositório** ou baixe o código para o seu ambiente local.
+2. **Execute o pipeline** utilizando o Nextflow:
 
 ```bash
-nextflow run nf-core/nextflow_course \
-   -profile <docker/singularity/.../institute> \
-   --input samplesheet.csv \
-   --outdir <OUTDIR>
+nextflow run main.nf -with-docker
 ```
-
-> [!WARNING]
-> Please provide pipeline parameters via the CLI or Nextflow `-params-file` option. Custom config files including those provided by the `-c` Nextflow option can be used to provide any configuration _**except for parameters**_; see [docs](https://nf-co.re/docs/usage/getting_started/configuration#custom-configuration-files).
 
 ## Credits
 
