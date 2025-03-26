@@ -1,0 +1,3 @@
+[2025-03-26 16:07:10,560] multiqc.core.file_search                           [INFO   ]  Search path: /home/jcs/jcs_ubuntu/nextflow_env/nf-core-nextflow_course/work/23/00e5b61fd063c26f207b17ad245607/sarscov2_1_fastqc.html
+[2025-03-26 16:07:10,560] multiqc.core.file_search                           [INFO   ]  Search path: /home/jcs/jcs_ubuntu/nextflow_env/nf-core-nextflow_course/work/23/00e5b61fd063c26f207b17ad245607/sarscov2_1_fastqc.zip
+[2025-03-26 16:07:10,635] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 1 reports

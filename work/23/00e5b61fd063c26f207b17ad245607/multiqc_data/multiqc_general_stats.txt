@@ -1,0 +1,2 @@
+Sample	fastqc-percent_duplicates	fastqc-percent_gc	fastqc-avg_sequence_length	fastqc-median_sequence_length	fastqc-percent_fails	fastqc-total_sequences
+sarscov2_1	1.0	39.0	138.9	150	36.36363636363637	9.999999999999999e-05

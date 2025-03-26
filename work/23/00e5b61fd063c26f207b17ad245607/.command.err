@@ -1,0 +1,11 @@
+
+/// MultiQC 🔍 v1.28
+
+       file_search | Search path: /home/jcs/jcs_ubuntu/nextflow_env/nf-core-nextflow_course/work/23/00e5b61fd063c26f207b17ad245607/sarscov2_1_fastqc.html
+       file_search | Search path: /home/jcs/jcs_ubuntu/nextflow_env/nf-core-nextflow_course/work/23/00e5b61fd063c26f207b17ad245607/sarscov2_1_fastqc.zip
+
+            fastqc | Found 1 reports
+
+     write_results | Data        : multiqc_data
+     write_results | Report      : multiqc_report.html
+           multiqc | MultiQC complete

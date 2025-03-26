@@ -1,0 +1,2 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	sarscov2_1	/home/jcs/jcs_ubuntu/nextflow_env/nf-core-nextflow_course/work/23/00e5b61fd063c26f207b17ad245607/sarscov2_1_fastqc.zip
